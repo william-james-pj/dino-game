@@ -24,6 +24,9 @@
 
 ## Sobre o projeto
 
+![DinoGame-screenshot](https://github.com/william-james-pj/dino-game/blob/main/readme-img/img.png)
+
+<br />
 Esse repositório é uma copia simple do jogo do dinossauro.
 
 Para testar o jogo acesse esse [link](https://william-james-pj.github.io/dino-game/).
