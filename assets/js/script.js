@@ -14,7 +14,7 @@ restartButton.onclick = function () {
 const startButton = document.querySelector(".start");
 startButton.onclick = function () {
   start();
-  document.querySelector(".containerStart").classList.remove('active');
+  document.querySelector(".containerStart").classList.remove("active");
 };
 
 function handleKeyUp(event) {
@@ -22,6 +22,13 @@ function handleKeyUp(event) {
     if (!isJumping) {
       jump();
     }
+  }
+}
+
+// touch
+function touchKeyUp() {
+  if (!isJumping) {
+    jump();
   }
 }
 
@@ -55,7 +62,7 @@ function createCactus() {
 
   const cactus = document.createElement("div");
   let cactusPosition = 1000;
-  let randomTime = Math.random() * 6000;
+  let randomTime = Math.random()  * (3000 - 2000) + 2000;
 
   cactus.classList.add("cactus");
   background.appendChild(cactus);
@@ -100,12 +107,18 @@ function stop() {
   containerFim.classList.add("active");
   document.removeEventListener("keyup", handleKeyUp);
   background.classList.remove("activeBackground");
+
+  // touch
+  window.removeEventListener("touchstart", touchKeyUp);
 }
 
 function start() {
   document.addEventListener("keyup", handleKeyUp);
   background.classList.add("activeBackground");
   createCactus();
+
+  // touch
+  window.addEventListener("touchstart", touchKeyUp);
 }
 
 function restart() {
