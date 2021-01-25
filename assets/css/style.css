@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: #B0CAA7;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header{
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  font-size: 34px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.screenGame {
+  width: 70%;
+  height: 70%;
+  background: #fafafa;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.containerFim{
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color:rgba(0,0,0,0.6);
+  position: absolute;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  display: none;
+}
+
+.restart{
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.restart:hover{
+  color: #B0CAA7;
+}
+
+.active{
+  display: flex;
+}
+
+.containerFim p{
+  color: #fff;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.dino {
+  position: absolute;
+  bottom: 0;
+  background-image: url("../img/dino.png");
+  width: 60px;
+  height: 60px;
+}
+
+.cactus {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  bottom: 0;
+  background-image: url("../img/cactus.png");
+}
+
+.game-over {
+  text-align: center;
+  color: #666;
+  margin: 50px 0;
+  font-family: arial;
+}
+
+@keyframes slideright {
+  from {
+    background-position: 70000%;
+  }
+  to {
+    background-position: 0%;
+  }
+}
+
+.background {
+  position: absolute;
+  bottom: 0px;
+  background-image: url("../img/background.png");
+  background-repeat: repeat-x;
+  width: 100%;
+  height: 200px;
+}
+
+.activeBackground{
+  animation: slideright 600s infinite linear;
+  -webkit-animation: slideright 600s infinite linear;
+}
