@@ -142,3 +142,19 @@ header{
   animation: slideright 600s infinite linear;
   -webkit-animation: slideright 600s infinite linear;
 }
+
+@media only screen and (max-width: 600px) {
+  .screenGame {
+    width: 90%;
+    height: 60%;
+  }
+
+  @keyframes slideright {
+    from {
+      background-position: -150000%;
+    }
+    to {
+      background-position: 0%;
+    }
+  }
+}
