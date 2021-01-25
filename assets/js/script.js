@@ -14,6 +14,7 @@ restartButton.onclick = function () {
 const startButton = document.querySelector(".start");
 startButton.onclick = function () {
   start();
+  document.querySelector(".containerStart").classList.remove('active');
 };
 
 function handleKeyUp(event) {

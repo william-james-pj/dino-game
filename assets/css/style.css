@@ -26,11 +26,12 @@ header{
   font-size: 34px;
   font-weight: 700;
   color: #fff;
+  user-select: none;
 }
 
 .screenGame {
   width: 70%;
-  height: 70%;
+  height: 60%;
   background: #fafafa;
   border-radius: 20px;
   overflow: hidden;
@@ -53,9 +54,38 @@ header{
   display: none;
 }
 
+.containerFim p{
+  color: #fff;
+  font-size: 34px;
+  font-weight: 700;
+  user-select: none;  
+}
+
 .restart{
   margin-top: 20px;
   cursor: pointer;
+}
+
+.containerStart{
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: rgba(79, 105, 78,0.8);
+  position: absolute;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  display: none;
+}
+
+.start{
+  color: #fff;
+  font-size: 34px;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
 }
 
 .restart:hover{
@@ -64,12 +94,7 @@ header{
 
 .active{
   display: flex;
-}
-
-.containerFim p{
-  color: #fff;
-  font-size: 34px;
-  font-weight: 700;
+  transition: all 0.8s;
 }
 
 .dino {
